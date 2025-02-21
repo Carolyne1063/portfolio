@@ -1,0 +1,81 @@
+<body class="bg-gradient-to-b from-gray-900 to-gray-800 text-white">
+    <header class="p-6 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Carolyne.</h1>
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="#about" class="hover:text-blue-400">About</a></li>
+                <li><a href="#education" class="hover:text-blue-400">Education</a></li>
+                <li><a href="#skills" class="hover:text-blue-400">Skills</a></li>
+                <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="h-screen flex items-center bg-gradient-to-b from-gray-900 to-black text-white px-16">
+        <!-- Left Section: Text -->
+        <div class="w-1/2">
+          <h2 class="text-5xl font-bold">Hi, I'm Carolyne Musenya</h2>
+          <p class="text-blue-400 text-3xl mt-4 font-semibold">
+            <span [innerHTML]="displayText"></span>
+          </p>
+          <p class="mt-4 max-w-lg">
+            I specialize in building modern web applications, handling both frontend and backend seamlessly.
+            Passionate about clean code and scalable solutions.
+          </p>
+          <div class="mt-6">
+            <button class="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-700 transition">Hire Me</button>
+            <button class="ml-4 border border-blue-500 px-6 py-3 rounded-lg hover:bg-blue-500 hover:text-white transition">Let's Talk</button>
+          </div>
+        </div>
+      
+        <!-- Right Section: Animated Image -->
+        <div class="w-1/2 flex justify-center">
+          <img *ngIf="imageVisible" [@fadeInOut] src="https://i.pinimg.com/736x/40/66/46/406646f036baf03ffffc255e3e3fc2a7.jpg" 
+            alt="Carolyne Musenya"
+            class="w-96 h-96 object-cover rounded-full border-4 border-blue-500 shadow-lg">
+        </div>
+      </section>
+      
+      
+    
+    <section id="about" class="h-screen mt-16 p-6 text-center">
+        <h2 class="text-3xl font-bold">About <span class="text-blue-400">Me</span></h2>
+        <img src="https://i.pinimg.com/736x/40/66/46/406646f036baf03ffffc255e3e3fc2a7.jpg" alt="Carolyne" class="w-32 h-32 mx-auto rounded-full mt-4 border-4 border-blue-500">
+        <p class="mt-4 max-w-2xl mx-auto">I am a Full Stack Engineer with expertise in frontend (Angular, TypeScript, Tailwind CSS) and backend (Node.js, SQL, APIs). I build efficient, scalable, and user-friendly applications.</p>
+    </section>
+    
+    <section id="skills" class="mt-16 p-6 text-center">
+        <h2 class="text-3xl font-bold">My <span class="text-blue-400">Skills</span></h2>
+        <div class="mt-6 max-w-xl mx-auto">
+            <div class="flex justify-between"><span>HTML</span><span>90%</span></div>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2"><div class="bg-blue-500 h-2 rounded-full w-9/10"></div></div>
+            
+            <div class="flex justify-between mt-4"><span>CSS</span><span>85%</span></div>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2"><div class="bg-blue-500 h-2 rounded-full w-4/5"></div></div>
+            
+            <div class="flex justify-between mt-4"><span>JavaScript</span><span>80%</span></div>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2"><div class="bg-blue-500 h-2 rounded-full w-4/5"></div></div>
+            
+            <div class="flex justify-between mt-4"><span>Node.js</span><span>85%</span></div>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2"><div class="bg-blue-500 h-2 rounded-full w-4/5"></div></div>
+            
+            <div class="flex justify-between mt-4"><span>Angular</span><span>90%</span></div>
+            <div class="w-full bg-gray-700 h-2 rounded-full mt-2"><div class="bg-blue-500 h-2 rounded-full w-9/10"></div></div>
+        </div>
+    </section>
+    
+    <section id="contact" class="mt-16 p-6 text-center">
+        <h2 class="text-3xl font-bold">Contact <span class="text-blue-400">Me</span></h2>
+        <form class="mt-6 max-w-lg mx-auto">
+            <input type="text" placeholder="Full Name" class="w-full p-3 bg-gray-800 border border-gray-600 rounded-md mb-3">
+            <input type="email" placeholder="Email Address" class="w-full p-3 bg-gray-800 border border-gray-600 rounded-md mb-3">
+            <textarea placeholder="Your Message" class="w-full p-3 bg-gray-800 border border-gray-600 rounded-md mb-3"></textarea>
+            <button class="bg-blue-500 px-6 py-2 rounded-lg hover:bg-blue-700">Submit</button>
+        </form>
+    </section>
+    
+    <footer class="text-center py-6 mt-16 border-t border-gray-600">
+        <p>Copyright &copy; 2025 Carolyne Musenya. All Rights Reserved.</p>
+    </footer>
+</body>
+
