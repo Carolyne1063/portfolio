@@ -11,12 +11,12 @@
         </nav>
     </header>
     
-    <section class="h-screen flex items-center bg-gradient-to-b from-gray-900 to-black text-white px-16">
+    <section class="h-screen flex items-center bg-gradient-to-b from-gray-900 to-black text-white px-20">
         <!-- Left Section: Text -->
         <div class="w-1/2">
           <h2 class="text-5xl font-bold">Hi, I'm Carolyne Musenya</h2>
           <p class="text-blue-400 text-3xl mt-4 font-semibold">
-            <span [innerHTML]="displayText"></span>
+            <span id="typewriter">{{ displayText }}</span>
           </p>
           <p class="mt-4 max-w-lg">
             I specialize in building modern web applications, handling both frontend and backend seamlessly.
@@ -24,55 +24,251 @@
           </p>
           <div class="mt-6">
             <button class="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-700 transition">Hire Me</button>
-            <button class="ml-4 border border-blue-500 px-6 py-3 rounded-lg hover:bg-blue-500 hover:text-white transition">Let's Talk</button>
+            <button class="ml-4 border border-blue-500 px-6 py-3 rounded-lg hover:bg-blue-500 hover:text-white transition">
+              Let's Talk
+            </button>
           </div>
         </div>
       
-        <!-- Right Section: Animated Image -->
-        <div class="w-1/2 flex justify-center">
-          <img *ngIf="imageVisible" [@fadeInOut] src="https://i.pinimg.com/736x/40/66/46/406646f036baf03ffffc255e3e3fc2a7.jpg" 
-            alt="Carolyne Musenya"
-            class="w-96 h-96 object-cover rounded-full border-4 border-blue-500 shadow-lg">
-        </div>
+        <!-- Right Section: Blended Image -->
+        <!-- Right Section: Blended Image -->
+        <!-- Right Section: Blended Image -->
+<div class="w-1/2 flex justify-end relative">
+    <img
+      src="https://i.pinimg.com/736x/40/66/46/406646f036baf03ffffc255e3e3fc2a7.jpg"
+      alt="Carolyne Musenya"
+      class="w-[350px] max-h-full object-cover opacity-90"
+    />
+  </div>
+  
+  
       </section>
       
       
+      
     
-    <section id="about" class="h-screen mt-16 p-6 text-center">
-        <h2 class="text-3xl font-bold">About <span class="text-blue-400">Me</span></h2>
-        <img src="https://i.pinimg.com/736x/40/66/46/406646f036baf03ffffc255e3e3fc2a7.jpg" alt="Carolyne" class="w-32 h-32 mx-auto rounded-full mt-4 border-4 border-blue-500">
-        <p class="mt-4 max-w-2xl mx-auto">I am a Full Stack Engineer with expertise in frontend (Angular, TypeScript, Tailwind CSS) and backend (Node.js, SQL, APIs). I build efficient, scalable, and user-friendly applications.</p>
+      <section id="about" class="h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-900 to-black text-white px-8">
+        <h2 class="text-4xl font-bold tracking-wide relative" data-aos="fade-down">
+            About <span class="text-blue-400">Me</span>
+            <span class="absolute left-1/2 bottom-0 w-16 h-1 bg-blue-400 rounded-full transform -translate-x-1/2"></span>
+        </h2>
+    
+        <div class="relative mt-8" data-aos="fade-up">
+            <img src="https://i.pinimg.com/736x/40/66/46/406646f036baf03ffffc255e3e3fc2a7.jpg" alt="Carolyne" 
+                 class="w-40 h-40 object-cover mx-auto rounded-full shadow-lg transition-transform duration-500 hover:scale-105">
+            
+            <!-- Soft Glow Effect -->
+            <div class="absolute inset-0 w-40 h-40 mx-auto bg-blue-400 opacity-20 blur-lg rounded-full"></div>
+        </div>
+    
+        <p class="mt-6 max-w-2xl text-lg text-gray-300 text-center leading-relaxed" data-aos="fade-right">
+            I’m Carolyne Musenya, a passionate <span class="text-blue-400 font-semibold">Full Stack Engineer</span> with a love for building seamless, high-performing web applications. 
+            With experience in both <span class="text-blue-400 font-semibold">frontend and backend development</span>, I specialize in crafting clean, scalable solutions that enhance user experiences. 
+            My journey in coding has been driven by a deep desire to create impactful digital products. 
+            My goal is to continue learning, innovating, and building applications that solve real-world problems while pushing the boundaries of web development. 🚀
+        </p>
+
     </section>
     
-    <section id="skills" class="mt-16 p-6 text-center">
-        <h2 class="text-3xl font-bold">My <span class="text-blue-400">Skills</span></h2>
-        <div class="mt-6 max-w-xl mx-auto">
-            <div class="flex justify-between"><span>HTML</span><span>90%</span></div>
-            <div class="w-full bg-gray-700 h-2 rounded-full mt-2"><div class="bg-blue-500 h-2 rounded-full w-9/10"></div></div>
-            
-            <div class="flex justify-between mt-4"><span>CSS</span><span>85%</span></div>
-            <div class="w-full bg-gray-700 h-2 rounded-full mt-2"><div class="bg-blue-500 h-2 rounded-full w-4/5"></div></div>
-            
-            <div class="flex justify-between mt-4"><span>JavaScript</span><span>80%</span></div>
-            <div class="w-full bg-gray-700 h-2 rounded-full mt-2"><div class="bg-blue-500 h-2 rounded-full w-4/5"></div></div>
-            
-            <div class="flex justify-between mt-4"><span>Node.js</span><span>85%</span></div>
-            <div class="w-full bg-gray-700 h-2 rounded-full mt-2"><div class="bg-blue-500 h-2 rounded-full w-4/5"></div></div>
-            
-            <div class="flex justify-between mt-4"><span>Angular</span><span>90%</span></div>
-            <div class="w-full bg-gray-700 h-2 rounded-full mt-2"><div class="bg-blue-500 h-2 rounded-full w-9/10"></div></div>
+    <section id="skills" class="p-10 bg-gray-800 text-white mt-8">
+        <h2 class="text-3xl font-bold text-center mb-6">My <span class="text-blue-400">Skills</span></h2>
+    
+        <div class="grid md:grid-cols-2 gap-6">
+            <!-- Coding Skills -->
+            <div class="border border-blue-400 rounded-lg p-6">
+                <h3 class="text-xl font-semibold text-blue-400 mb-4">Coding Skills</h3>
+                <div class="space-y-4">
+                    <div>
+                        <p class="flex justify-between text-sm">HTML <span>100%</span></p>
+                        <div class="w-full bg-gray-700 h-2 rounded-full">
+                            <div class="bg-blue-400 h-2 rounded-full w-[100%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="flex justify-between text-sm">CSS <span>100%</span></p>
+                        <div class="w-full bg-gray-700 h-2 rounded-full">
+                            <div class="bg-blue-400 h-2 rounded-full w-[100%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="flex justify-between text-sm">TypeScript <span>85%</span></p>
+                        <div class="w-full bg-gray-700 h-2 rounded-full">
+                            <div class="bg-blue-400 h-2 rounded-full w-[85%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="flex justify-between text-sm">Node.js <span>85%</span></p>
+                        <div class="w-full bg-gray-700 h-2 rounded-full">
+                            <div class="bg-blue-400 h-2 rounded-full w-[85%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="flex justify-between text-sm">Express.js <span>85%</span></p>
+                        <div class="w-full bg-gray-700 h-2 rounded-full">
+                            <div class="bg-blue-400 h-2 rounded-full w-[85%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="flex justify-between text-sm">SQL <span>80%</span></p>
+                        <div class="w-full bg-gray-700 h-2 rounded-full">
+                            <div class="bg-blue-400 h-2 rounded-full w-[80%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="flex justify-between text-sm">Cypress <span>75%</span></p>
+                        <div class="w-full bg-gray-700 h-2 rounded-full">
+                            <div class="bg-blue-400 h-2 rounded-full w-[75%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="flex justify-between text-sm">Jasmine <span>70%</span></p>
+                        <div class="w-full bg-gray-700 h-2 rounded-full">
+                            <div class="bg-blue-400 h-2 rounded-full w-[70%]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Professional Skills -->
+            <div class="border border-blue-400 rounded-lg p-6">
+                <h3 class="text-xl font-semibold text-blue-400 mb-4">Professional Skills</h3>
+                <div class="space-y-4">
+                    <div>
+                        <p class="flex justify-between text-sm">Web Design <span>90%</span></p>
+                        <div class="w-full bg-gray-700 h-2 rounded-full">
+                            <div class="bg-blue-400 h-2 rounded-full w-[90%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="flex justify-between text-sm">Frontend Development <span>90%</span></p>
+                        <div class="w-full bg-gray-700 h-2 rounded-full">
+                            <div class="bg-blue-400 h-2 rounded-full w-[90%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="flex justify-between text-sm">Backend Development <span>85%</span></p>
+                        <div class="w-full bg-gray-700 h-2 rounded-full">
+                            <div class="bg-blue-400 h-2 rounded-full w-[85%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="flex justify-between text-sm">Quality Assurance (QA) <span>80%</span></p>
+                        <div class="w-full bg-gray-700 h-2 rounded-full">
+                            <div class="bg-blue-400 h-2 rounded-full w-[80%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="flex justify-between text-sm">Quality Engineering (QE) <span>75%</span></p>
+                        <div class="w-full bg-gray-700 h-2 rounded-full">
+                            <div class="bg-blue-400 h-2 rounded-full w-[75%]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+      
+        <!-- Moving Logos -->
+        <div class="relative w-full overflow-hidden">
+          <div class="flex gap-10 animate-marquee">
+            <img *ngFor="let logo of techStackLogos" [src]="logo.src" [alt]="logo.alt" class="w-16 h-16">
+          </div>
+        </div>
+      
+      
+
+    <section id="projects" class="p-10 bg-gray-800 text-white mt-8" data-aos="zoom-in-up" data-aos-duration="1200" data-aos-delay="300">
+        <h2 class="text-3xl font-bold text-center mb-6">My <span class="text-blue-400">Projects</span></h2>
+    
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="border border-blue-400 rounded-lg overflow-hidden shadow-lg bg-gray-900">
+                <img src="https://i.pinimg.com/474x/dc/de/11/dcde11679d89a0e492d665db05ec4287.jpg" alt="Project Image" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-blue-400 mb-2">Notebook App</h3>
+                    <p class="text-gray-300 text-sm">A feature-rich notebook application built with Angular and Node.js, allowing users to create, edit, and manage notes efficiently.</p>
+                    <a href="#" class="mt-3 inline-block text-blue-400 hover:underline">View Project →</a>
+                </div>
+            </div>
+    
+            <!-- Project 2 -->
+            <div class="border border-blue-400 rounded-lg overflow-hidden shadow-lg bg-gray-900">
+                <img src="https://i.pinimg.com/474x/5c/fd/93/5cfd93bf09153e97707fff073ccd309c.jpg" alt="Project Image" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-blue-400 mb-2">Coffee E-Commerce</h3>
+                    <p class="text-gray-300 text-sm">A full-stack coffee e-commerce platform where users can browse, add to cart, and purchase premium coffee products.</p>
+                    <a href="#" class="mt-3 inline-block text-blue-400 hover:underline">View Project →</a>
+                </div>
+            </div>
+    
+            <!-- Project 3 -->
+            <div class="border border-blue-400 rounded-lg overflow-hidden shadow-lg bg-gray-900">
+                <img src="http://localhost:4200/assets/unigrad.jpeg" alt="Project Image" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-blue-400 mb-2">Plana - Event Booking</h3>
+                    <p class="text-gray-300 text-sm">An event planning and ticket booking platform with real-time analytics, user management, and seamless ticket purchasing.</p>
+                    <a href="#" class="mt-3 inline-block text-blue-400 hover:underline">View Project →</a>
+                </div>
+            </div>
         </div>
     </section>
     
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="bg-blue-900 bg-opacity-90 p-6 rounded-lg shadow-lg text-white" data-aos="fade-right">
+            <h3 class="text-4xl font-bold">5+</h3>
+            <p class="text-lg mt-2">Years of Development Experience</p>
+        </div>
+        <div class="bg-blue-900 bg-opacity-90 p-6 rounded-lg shadow-lg text-white" data-aos="zoom-in">
+            <h3 class="text-4xl font-bold">20+</h3>
+            <p class="text-lg mt-2">Successful Projects Delivered</p>
+        </div>
+        <div class="bg-blue-900 bg-opacity-90 p-6 rounded-lg shadow-lg text-white" data-aos="fade-left">
+            <h3 class="text-4xl font-bold">10+</h3>
+            <p class="text-lg mt-2">Technologies Mastered</p>
+        </div>
+    </div>
+    
+    
+
     <section id="contact" class="mt-16 p-6 text-center">
         <h2 class="text-3xl font-bold">Contact <span class="text-blue-400">Me</span></h2>
+        
         <form class="mt-6 max-w-lg mx-auto">
-            <input type="text" placeholder="Full Name" class="w-full p-3 bg-gray-800 border border-gray-600 rounded-md mb-3">
-            <input type="email" placeholder="Email Address" class="w-full p-3 bg-gray-800 border border-gray-600 rounded-md mb-3">
-            <textarea placeholder="Your Message" class="w-full p-3 bg-gray-800 border border-gray-600 rounded-md mb-3"></textarea>
-            <button class="bg-blue-500 px-6 py-2 rounded-lg hover:bg-blue-700">Submit</button>
+            <input type="text" placeholder="Full Name" class="w-full p-3 bg-gray-800 border border-gray-600 rounded-md mb-3 text-white">
+            <input type="email" placeholder="Email Address" class="w-full p-3 bg-gray-800 border border-gray-600 rounded-md mb-3 text-white">
+            <textarea placeholder="Your Message" class="w-full p-3 bg-gray-800 border border-gray-600 rounded-md mb-3 text-white"></textarea>
+            <button class="bg-blue-500 px-6 py-2 rounded-lg hover:bg-blue-700 text-white font-bold">Submit</button>
         </form>
+    
+        <!-- Contact Details -->
+        <div class="mt-8 text-white">
+            <p class="text-lg"><strong>📍 Address:</strong> Nairobi, Kenya</p>
+            <p class="text-lg"><strong>📧 Email:</strong> <a href="mailto:your.email&#64;example.com" class="text-blue-400 hover:underline">your.email&#64;example.com</a></p>
+            <p class="text-lg"><strong>📞 Phone:</strong> <a href="tel:+254712345678" class="text-blue-400 hover:underline">+254 712 345 678</a></p>
+        </div>
+    
+        <!-- Social Media Links -->
+        <div class="mt-6 flex justify-center space-x-6">
+            <a href="https://github.com/yourusername" target="_blank" class="text-white hover:text-blue-400 text-2xl">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" class="text-white hover:text-blue-400 text-2xl">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com/yourusername" target="_blank" class="text-white hover:text-blue-400 text-2xl">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://facebook.com/yourusername" target="_blank" class="text-white hover:text-blue-400 text-2xl">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com/yourusername" target="_blank" class="text-white hover:text-blue-400 text-2xl">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
     </section>
+    
     
     <footer class="text-center py-6 mt-16 border-t border-gray-600">
         <p>Copyright &copy; 2025 Carolyne Musenya. All Rights Reserved.</p>

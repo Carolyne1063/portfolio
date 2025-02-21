@@ -1,2 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+
+@keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-marquee {
+    display: flex;
+    min-width: 100%;
+    animation: marquee 10s linear infinite;
+  }
+  
